@@ -6,8 +6,8 @@
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
         <ProjectGuid>{C00ECD51-7423-44BE-9EE9-9E80EABFAB39}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>WpfWizard</RootNamespace>
-        <AssemblyName>WpfWizard</AssemblyName>
+        <RootNamespace>WizardUsageSample</RootNamespace>
+        <AssemblyName>WizardUsageSample</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -61,10 +61,7 @@
         <Compile Include="UnknownViewModel.cs" />
         <Compile Include="ViewModelBase.cs" />
         <Compile Include="Wizard.cs" />
-        <Compile Include="WizardBase.cs" />
         <Compile Include="WizardCommand.cs" />
-        <Compile Include="WizardPage.cs" />
-        <Compile Include="WizardPageHost.cs" />
         <Page Include="MainWindow.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -94,6 +91,12 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Wpf.Wizard\Wpf.Wizard.csproj">
+        <Project>{982cff8b-38b0-426e-a5fc-8bfd8c6178d8}</Project>
+        <Name>Wpf.Wizard</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

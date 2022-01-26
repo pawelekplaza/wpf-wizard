@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace WpfWizard;
+namespace WizardUsageSample;
 
 public class WizardCommand : ICommand
 {

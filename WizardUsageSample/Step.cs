@@ -1,4 +1,4 @@
-﻿namespace WpfWizard;
+﻿namespace WizardUsageSample;
 
 public enum Step
 {

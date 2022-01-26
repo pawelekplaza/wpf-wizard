@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace WpfWizard
+namespace WizardUsageSample
 {
     public class MainWindowViewModel : ViewModelBase
     {
@@ -38,7 +38,7 @@ namespace WpfWizard
                     Instrument.SerialNumber = random.Next(100_000, 999_999).ToString();
                     Instrument.Label = Path.GetRandomFileName();
 
-                    await Task.Delay(2000);
+                    await Task.Delay(1000);
                 }
             });
         }

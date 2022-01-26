@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfWizard"
+        xmlns:local="clr-namespace:WizardUsageSample"
+        xmlns:wizard="clr-namespace:Wpf.Wizard;assembly=Wpf.Wizard"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="350"
@@ -21,10 +22,10 @@
                   >
 
         <local:Wizard.Pages>
-            <local:WizardPage Style="{DynamicResource Style.Page.Unknown}" />
-            <local:WizardPage Style="{DynamicResource Style.Page.Detecting}" />
-            <local:WizardPage Content="{Binding Instrument}" Style="{DynamicResource Style.Page.SelectSettings}" />
-            <local:WizardPage Style="{DynamicResource Style.Page.Success}" />
+            <wizard:WizardPage Style="{DynamicResource Style.Page.Unknown}" />
+            <wizard:WizardPage Style="{DynamicResource Style.Page.Detecting}" />
+            <wizard:WizardPage Content="{Binding Instrument}" Style="{DynamicResource Style.Page.SelectSettings}" />
+            <wizard:WizardPage Style="{DynamicResource Style.Page.Success}" />
         </local:Wizard.Pages>
 
         <local:Wizard.Template>
@@ -40,7 +41,7 @@
                     <ContentControl Content="{Binding Instrument}" ContentTemplate="{DynamicResource DataTemplate.Instrument}" />
 
                     <!--  Steps  -->
-                    <local:WizardPageHost x:Name="PART_WizardPageHost" Grid.Row="1" />
+                    <wizard:WizardPageHost x:Name="PART_WizardPageHost" Grid.Row="1" />
 
                     <!--  Buttons  -->
                     <ItemsControl Grid.Row="2"

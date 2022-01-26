@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WpfWizard
+namespace WizardUsageSample
 {
     /// <summary>
     /// Base view model implementing <see cref="INotifyPropertyChanged"/>.

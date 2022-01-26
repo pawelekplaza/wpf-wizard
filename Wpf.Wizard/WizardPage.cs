@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfWizard;
+namespace Wpf.Wizard;
 
 public class WizardPage : ContentControl
 {

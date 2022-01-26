@@ -1,7 +1,8 @@
 ﻿<Application x:Class="WpfWizard.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WpfWizard"
+             xmlns:local="clr-namespace:WizardUsageSample"
+             xmlns:wizard="clr-namespace:Wpf.Wizard;assembly=Wpf.Wizard"
              StartupUri="MainWindow.xaml"
              >
     <Application.Resources>
@@ -29,7 +30,7 @@
             </Border>
         </DataTemplate>
 
-        <Style x:Key="Style.Page.Unknown" TargetType="{x:Type local:WizardPage}">
+        <Style x:Key="Style.Page.Unknown" TargetType="{x:Type wizard:WizardPage}">
             <Setter Property="EnumValue" Value="{x:Static local:Step.Unknown}" />
             <Setter Property="Template" Value="{DynamicResource Template.Page.Unknown}" />
             <Setter Property="DataContext">
@@ -39,7 +40,7 @@
             </Setter>
         </Style>
 
-        <Style x:Key="Style.Page.Detecting" TargetType="{x:Type local:WizardPage}">
+        <Style x:Key="Style.Page.Detecting" TargetType="{x:Type wizard:WizardPage}">
             <Setter Property="EnumValue" Value="{x:Static local:Step.Detecting}" />
             <Setter Property="Template" Value="{DynamicResource Template.Page.Detecting}" />
             <Setter Property="DataContext">
@@ -49,12 +50,12 @@
             </Setter>
         </Style>
 
-        <Style x:Key="Style.Page.SelectSettings" TargetType="{x:Type local:WizardPage}">
+        <Style x:Key="Style.Page.SelectSettings" TargetType="{x:Type wizard:WizardPage}">
             <Setter Property="EnumValue" Value="{x:Static local:Step.SelectSettings}" />
             <Setter Property="ContentTemplate" Value="{DynamicResource DataTemplate.Page.SelectSettings}" />
         </Style>
 
-        <Style x:Key="Style.Page.Success" TargetType="{x:Type local:WizardPage}">
+        <Style x:Key="Style.Page.Success" TargetType="{x:Type wizard:WizardPage}">
             <Setter Property="EnumValue" Value="{x:Static local:Step.Success}" />
             <Setter Property="Template" Value="{DynamicResource Template.Page.Success}" />
             <Setter Property="DataContext">
@@ -64,11 +65,11 @@
             </Setter>
         </Style>
 
-        <ControlTemplate x:Key="Template.Page.Unknown" TargetType="{x:Type local:WizardPage}">
+        <ControlTemplate x:Key="Template.Page.Unknown" TargetType="{x:Type wizard:WizardPage}">
             <TextBlock FontSize="24" Text="UNKNOWN" />
         </ControlTemplate>
 
-        <ControlTemplate x:Key="Template.Page.Detecting" TargetType="{x:Type local:WizardPage}">
+        <ControlTemplate x:Key="Template.Page.Detecting" TargetType="{x:Type wizard:WizardPage}">
             <Border Background="Peru">
                 <TextBlock FontSize="24" Text="DETECTING..." />
             </Border>
@@ -84,7 +85,7 @@
             </Border>
         </DataTemplate>
 
-        <ControlTemplate x:Key="Template.Page.Success" TargetType="{x:Type local:WizardPage}">
+        <ControlTemplate x:Key="Template.Page.Success" TargetType="{x:Type wizard:WizardPage}">
             <Border Background="DarkGreen">
                 <TextBlock FontSize="24" Text="SUCCESS!" />
             </Border>

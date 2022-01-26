@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WpfWizard;
+namespace WizardUsageSample;
 
 public class SuccessViewModel : ViewModelBase, IWizardPageViewModel
 {
